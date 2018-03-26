@@ -1,0 +1,13 @@
+hubot:
+  build: .
+  environment:
+    - HUBOT_SLACK_TOKEN
+    - SLACK_TIMELINE_MSG_REDIS
+    - SLACK_TIMELINE_RANKING_ENABLED
+    - SLACK_TIMELINE_RANKING_CHANNEL
+    - SLACK_TIMELINE_RANKING_CRONJOB
+    - TZ
+    - HUBOT_LOG_LEVEL
+  ports:
+    - "8080:8080"
+  restart: always

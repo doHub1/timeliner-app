@@ -1,0 +1,22 @@
+{
+  "name": "timeliner",
+  "version": "0.0.0",
+  "private": true,
+  "author": "knjcode <knjcode@gmail.com>",
+  "description": "This hubot will send all of the messages on Slack in #timeline",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "cron": "^1.3.0",
+    "es6-promise": "^4.2.4",
+    "hubot": "^2.19.0",
+    "hubot-slack": "^4.4.0",
+    "redis": "^2.8.0",
+    "time": "^0.12.0"
+  },
+  "engines": {
+    "node": "9.x.x"
+  },
+  "scripts": {
+    "start": "hubot -a slack"
+  }
+}
