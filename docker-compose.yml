@@ -2,17 +2,21 @@ hubot:
   build: .
   environment:
     - HUBOT_SLACK_TOKEN
-    - SLACK_TIMELINE_MSG_REDIS
+    - SLACK_TIMELINE_MSG_REDIS=redis://redis:6379
     - SLACK_LINK_NAMES
     - SLACK_UNFURL_LINKS
     - SLACK_UNFURL_MEDIA
     - SLACK_TIMELINE_CHANNEL
-    - SLACK_TIMELINE_RANKING_ENABLED
+    - SLACK_TIMELINE_RANKING_ENABLED=true
     - SLACK_TIMELINE_RANKING_CHANNEL
-    - SLACK_TIMELINE_RANKING_CRONJOB
+    - SLACK_TIMELINE_RANKING_CRONJOB=0 0 9 * * *
     - SLACK_TIMELINE_RANKING_TOP_N
-    - TZ
+    - TZ=Asia/Tokyo
     - HUBOT_LOG_LEVEL
   ports:
     - "8080:8080"
   restart: always
+  links:
+    - redis
+redis:
+  image: redis:latest
