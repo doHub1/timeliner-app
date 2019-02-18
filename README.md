@@ -9,4 +9,5 @@
    - SLACK_TIMELINE_RANKING_CHANNEL=general
 
 # run
-- `docker-compose up` 
+- `docker-compose up`
+  - add `-d` option to run background.
