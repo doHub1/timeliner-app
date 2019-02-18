@@ -1,7 +1,7 @@
 hubot:
   build: .
   environment:
-    - HUBOT_SLACK_TOKEN
+    - HUBOT_SLACK_TOKEN={YOUR SLACK TOKEN HERE e.g. xoxo-FOOBAR}
     - SLACK_TIMELINE_MSG_REDIS=redis://redis:6379
     - SLACK_LINK_NAMES
     - SLACK_UNFURL_LINKS
